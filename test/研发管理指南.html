@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件研发管理指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>软件研发管理框架指南</h1>
+        <p>基于业界最佳实践的研发管理体系</p>
+    </header>
+    <!--#include virtual="navbar.html" -->
+    
+    <nav>
+        <ul>
+            <li><a href="#framework">1. 研发管理框架</a></li>
+            <li><a href="#key-points">2. 管理核心要素</a></li>
+            <li><a href="#best-practices">3. 工程实践</a></li>
+        </ul>
+    </nav>
+
+    <main class="framework-container">
+        <!-- 管理框架模块 -->
+        <section class="framework-card">
+            <h2 id="framework">1. 研发管理框架</h2>
+            <div class="pillar">
+                <h3>1.1 流程体系</h3>
+                <ul>
+                    <li>敏捷开发（Scrum/Kanban）：采用迭代、增量的方式进行软件开发，强调快速响应变化和持续交付价值。Scrum 强调团队协作和自组织，Kanban 强调可视化工作流程和限制在制品数量。</li>
+                    <li>CI/CD流水线：持续集成（CI）指频繁地将代码集成到主干，并通过自动化测试来及早发现集成错误。持续交付（CD）指自动将通过测试的代码部署到生产环境，实现快速、可靠的软件发布。</li>
+                    <li>代码审查机制：通过同行评审的方式，对代码进行检查，以发现潜在的缺陷、改进代码质量和促进知识共享。</li>
+                    <li>版本发布流程：定义清晰的版本发布流程，包括版本计划、版本构建、版本测试、版本发布和版本回滚等环节，确保软件发布的质量和可控性。</li>
+                </ul>
+            </div>
+            
+            <div class="pillar">
+                <h3>1.2 质量保障</h3>
+                <ul>
+                    <li>自动化测试金字塔模型：强调测试的层次性和不同层次测试的投入比例。底层是单元测试，中间是集成测试，顶层是UI测试。单元测试投入最多，UI测试投入最少。</li>
+                    <li>代码静态分析：通过工具对代码进行静态分析，发现潜在的缺陷、不规范的代码和安全漏洞。</li>
+                    <li>安全合规检查：确保软件符合相关的安全标准和法规要求，例如 GDPR、HIPAA 等。</li>
+                    <li>性能基准测试：通过模拟用户负载，对软件的性能进行测试，以评估软件的性能瓶颈和可扩展性。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 核心要素模块 -->
+        <section class="key-points">
+            <h2 id="key-points">2. 管理核心要素</h2>
+            <article class="card">
+                <h3>需求管理</h3>
+                <ul>
+                    <li>用户故事拆分规范：将大型需求拆分为 ছোট、可独立交付的用户故事，每个用户故事都应描述用户价值、功能和验收标准。</li>
+                    <li>优先级评估矩阵：使用优先级评估矩阵（例如 Eisenhower 矩阵）对用户故事进行优先级排序，优先处理高价值、紧急的需求。</li>
+                    <li>需求变更控制流程：建立明确的需求变更控制流程，对需求变更进行评估、审批和跟踪，确保需求变更的可控性和可追溯性。</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>技术债务管理</h3>
+                <ul>
+                    <li>代码健康度评估：定期评估代码的健康度，例如代码复杂度、重复率、坏味道等，识别潜在的技术债务。</li>
+                    <li>技术债务跟踪机制：建立技术债务跟踪机制，记录技术债务的类型、影响、修复成本和优先级，并制定偿还计划。</li>
+                    <li>重构策略规划：根据技术债务的严重程度和影响范围，制定相应的重构策略，例如小规模重构、大规模重构或系统重写。</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>效能度量</h3>
+                <ul>
+                    <li>交付吞吐量（Throughput）：衡量团队在单位时间内交付的用户故事数量或功能点数，反映团队的交付能力。</li>
+                    <li>周期时间（Cycle Time）：衡量从需求开始到需求交付所花费的时间，反映团队的交付效率。</li>
+                    <li>缺陷逃逸率：衡量发布到生产环境的缺陷数量占总缺陷数量的比例，反映软件质量。</li>
+                    <li>代码评审覆盖率：衡量经过代码评审的代码占总代码量的比例，反映代码质量控制的力度。</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 最佳实践模块 -->
+        <section class="best-practices">
+            <h2 id="best-practices">3. 工程实践</h2>
+            <div class="practice">
+                <h3>Git分支策略</h3>
+                <p>Git Flow / GitHub Flow / Trunk Based Development：不同的分支策略适用于不同的团队和项目。Git Flow 适用于大型、复杂的项目，GitHub Flow 适用于小型、简单的项目，Trunk Based Development 适用于需要快速迭代和持续交付的项目。</p>
+            </div>
+            
+            <div class="practice">
+                <h3>文档即代码</h3>
+                <p>Markdown格式文档库 + 版本化管理 + 自动化发布：将文档视为代码的一部分，使用 Markdown 等轻量级标记语言编写文档，并将其纳入版本控制系统，实现文档的版本化管理和自动化发布。</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
